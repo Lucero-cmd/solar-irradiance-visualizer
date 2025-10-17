@@ -3,11 +3,12 @@ import requests
 import matplotlib.pyplot as plt
 from datetime import datetime
 
+#Enter your lat&long
 LAT = 6.4474
 LON = 3.3903
 DATE = datetime.today().strftime("%Y-%m-%d")
 
-# Correct Open-Meteo endpoint for hourly shortwave radiation
+# Open-Meteo endpoint for hourly shortwave radiation
 url = (
     f"https://api.open-meteo.com/v1/forecast?"
     f"latitude={LAT}&longitude={LON}"
@@ -33,3 +34,4 @@ plt.xticks(hours)
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+
